@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Advance Calculator</title>
+    <style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: pink;
+    }
+
+    h1 {
+        color: darkblue;
+    }
+
+    label {
+        color: darkblue;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Advance Calculator!</h1>
+    <br>
+    <img src="{{url_for('static', filename='img.png')}}" alt="Calculator Image" height="200" width="200">
+    <form method="POST">
+        <label>Enter expression</label>
+        <br>
+        <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+            <option>Choose Operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Expression" name="text" required>
+        <input type="submit" value="Calculate">   
+    </form>
+    <p>Your equation is {{equation}} = {{ result }}</p>
+    <br><br>
+    <label>Created by - Pratik</label>
+</body>
+</html>
